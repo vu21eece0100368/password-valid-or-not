@@ -1,6 +1,5 @@
 import re
-password ="Siva@123"
-print("enter a valid password,passw")
+password = input("Enter your passwod:")
 flag = 0
 while True:  
     if (len(password)<8):
@@ -15,7 +14,7 @@ while True:
     elif not re.search("[0-9]", password):
         flag = -1
         break
-    elif not re.search("[_@$]", password):
+    elif not re.search("[_@$-]", password):
         flag = -1
         break
     elif re.search("\s", password):
@@ -23,8 +22,9 @@ while True:
         break
     else:
         flag = 0
-        print("Valid Password")
+        print("valid password")
         break
   
 if flag ==-1:
     print("Not a Valid Password")
+
